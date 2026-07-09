@@ -47,8 +47,6 @@ Resources:
                   - ec2:DescribeSubnets
                   - ec2:DescribeVpcs
                   - ec2:RunInstances
-                  - ec2:StartInstances
-                  - ec2:StopInstances
                 Resource: '*'
 
   S3User:
@@ -59,7 +57,7 @@ Resources:
       Groups:
         - !Ref S3UserGroup
       LoginProfile:
-        Password: !Sub '{{resolve:secretsmanager:iam-lab-user-temp-password}}'
+        Password: '{{resolve:secretsmanager:iam-lab-user-temp-password}}'
         PasswordResetRequired: true
 
   EC2User1:
@@ -70,7 +68,7 @@ Resources:
       Groups:
         - !Ref EC2UserGroup
       LoginProfile:
-        Password: !Sub '{{resolve:secretsmanager:iam-lab-user-temp-password}}'
+        Password: '{{resolve:secretsmanager:iam-lab-user-temp-password}}'
         PasswordResetRequired: true
 
   EC2User2:
@@ -81,7 +79,7 @@ Resources:
       Groups:
         - !Ref EC2UserGroup
       LoginProfile:
-        Password: !Sub '{{resolve:secretsmanager:iam-lab-user-temp-password}}'
+        Password: '{{resolve:secretsmanager:iam-lab-user-temp-password}}'
         PasswordResetRequired: true
       Policies:
         - PolicyName: DenyEC2Creation
