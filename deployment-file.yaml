@@ -1,4 +1,0 @@
-template-file-location: /iam-resources.yaml
-tags:
-  Project: IAM-CloudFormation-Lab
-  Environment: Development
