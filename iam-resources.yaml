@@ -92,19 +92,18 @@ Resources:
                 Resource: '*'
 
 Outputs:
-
   TemporaryPasswordSecretArn:
-  Description: Secrets Manager ARN for the temporary password
-  Value: !Ref IAMUserTemporaryPassword
+    Description: Secrets Manager ARN for the temporary password
+    Value: !Ref IAMUserTemporaryPassword
 
   S3UserArn:
     Description: ARN of the S3 user
     Value: !GetAtt S3User.Arn
-  
+
   EC2User1Arn:
     Description: ARN of the first EC2 user
     Value: !GetAtt EC2User1.Arn
-  
+
   EC2User2Arn:
     Description: ARN of the second EC2 user
     Value: !GetAtt EC2User2.Arn
