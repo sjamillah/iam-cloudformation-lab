@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: IAM lab with automated user, group, and permission provisioning using CloudFormation.
-# v2.1
+# v2.2
 Resources:
 
   IAMUserTemporaryPassword:
