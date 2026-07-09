@@ -46,7 +46,9 @@ Resources:
                   - ec2:DescribeSecurityGroups
                   - ec2:DescribeSubnets
                   - ec2:DescribeVpcs
+                  - ec2:GetSecurityGroupsForVpc
                   - ec2:RunInstances
+                  - ec2:CreateTags
                 Resource: '*'
 
   S3User:
